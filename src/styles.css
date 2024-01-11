@@ -1,22 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
 body {
   background: url("https://placehold.co/100x100/FFFFFF/EFEFEF/png?text=49878");
-  font-family: 'Poppins', sans-serif;
+  font-family: Helvetica, sans-serif;
 }
 
-:root {
-  --primary-color: #008148;
-  --secondary-color: #323B86;
-  --accent-color: #e8e7fa;
-  --shadow-color: #E8E8E8;
+header .header_container{
+  background-color: gray;
+  color: navy;
+  padding: 2px;
+  border: 2px solid navy;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:  'header tasks archive' ;
+  align-items: center;
 }
 
-button.primary {
-  padding: 10px;
-  border: solid 1px var(--primary-color);
-  background: var(--primary-color);
+h1 {
+  font-size: 150%;
+  font-weight: bold;
+  text-align: center;
+  grid-area: header;
+}
+
+header .header_container .tasks {
   color: white;
-  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  grid-area: tasks;
+  padding: 5px;
 }
 
+header .header_container .archive {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  grid-area: archive;
+  padding: 5px;
+}
+
+.footernote {
+  background-color: gray;
+  color: white;
+  text-align: right;
+  font-size: 80%;
+  font-weight: bold;
+  padding: 10px;
+  border: 2px solid navy
+}
