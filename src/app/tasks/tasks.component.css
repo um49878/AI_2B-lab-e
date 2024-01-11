@@ -1,0 +1,103 @@
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.tasks_list .task {
+  background-color: lightblue;
+  border: 1px solid navy;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.5fr;
+  grid-template-areas:  'description deadline action' ;
+}
+
+.completed-task {
+  background-color: lightgreen;
+  border: 1px solid darkgreen;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  padding: 5px;
+  color: gray;
+  text-decoration: line-through;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.5fr;
+  grid-template-areas:  'description deadline action' ;
+}
+
+.tasks_list .task .description {
+  grid-area: description;
+}
+
+.tasks_list .task .deadline {
+  grid-area: deadline;
+  font-weight: bold;
+  text-align: center;
+}
+
+.tasks_list .task .deadline.expired {
+
+  background-color: lightpink;
+  border-radius: 6px;
+  font-weight: bold;
+  color: darkred;
+}
+
+.tasks_list .task .action {
+  grid-area: action;
+  text-align: right;
+}
+
+.add_form{
+  display: grid;
+  grid-template-columns: 0.5fr 0.4fr 0.1fr;
+  grid-template-areas:  'description deadline action';
+  background-color: lightcyan;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.form_field {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.add_form .form_field input[type="text"] {
+  background-color: lightcyan;
+  grid-column: 2 / 3;
+  background-color: lightcyan;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+.add_form .form_field input[type="date"] {
+  background-color: lightcyan;
+  grid-column: 2 / 3;
+  background-color: lightcyan;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+.add_form .form_field label {
+  grid-column: 1 / 2;
+  margin-right: 5px;
+}
+
+.add_form .add_btn {
+  background-color: darkgreen;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 4px 12px;
+}
+
+.arch_btn {
+  background-color: navy;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 4px 12px;
+}

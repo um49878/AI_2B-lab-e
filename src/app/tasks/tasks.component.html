@@ -1,0 +1,34 @@
+<h2>Zadania</h2>
+<div class="task_container">
+  <form class="add_form">
+    <div class="form_field">
+      <label for="title">Opis</label>
+      <input type="text" id="title" name="title" [(ngModel)]="newTask.title" class="form-control" [disabled]="inWork" />
+    </div>
+    <div class="form_field">
+      <label for="deadline">Termin</label>
+      <input type="date" id="deadline" name="deadline" [(ngModel)]="newTask.deadline" class="form-control" [disabled]="inWork" />
+    </div>
+    <div class="form_field">
+      <button type="button" class="add_btn" (click)="addTask()" [disabled]="inWork">
+        {{inWork ? 'Przetwarzanie...': 'Dodaj'}}
+      </button>
+    </div>
+  </form>
+
+  <div class="tasks_list">
+    <div class="task" *ngFor="let task of tasks" [ngClass]="{'completed-task': task.completed}">
+      <div class="description">{{task.title}}</div>
+      <div class="deadline" *ngIf="task && task.deadline" [ngClass]="{'expired': isExpired(task.deadline)}">
+        <span [ngClass]="{'expired': isExpired(task.deadline)}">{{ task.deadline }}</span>
+      </div>
+      <div class="action">
+        <input type="checkbox" id="completed" [(ngModel)]="task.completed" (change)="handleChange(task)" />
+      </div>
+    </div>
+  </div>
+  <button class="arch_btn" (click)="archiveCompleted()">Archiwizuj ukończone</button>
+</div>
+
+
+

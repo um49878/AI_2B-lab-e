@@ -1,0 +1,13 @@
+<h2>Zarchiwizowane</h2>
+<div class="tasks_list">
+  <div class="task" *ngFor="let task of tasks">
+    <div class="description">{{task.title}}</div>
+    <div class="deadline">
+      <span [ngClass]="{'expired': isExpired(task.deadline)}">{{ task.deadline }}</span>
+    </div>
+    <div class="action">
+      <button class="del_btn" (click)="delete(task)">Skasuj</button>
+    </div>
+  </div>
+</div>
+

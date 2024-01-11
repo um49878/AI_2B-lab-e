@@ -1,0 +1,45 @@
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.tasks_list .task {
+  background-color: lightblue;
+  border: 1px solid navy;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.5fr;
+  grid-template-areas:  'description deadline action' ;
+}
+
+.tasks_list .task .description {
+  grid-area: description;
+}
+
+.tasks_list .task .deadline {
+  grid-area: deadline;
+  font-weight: bold;
+  text-align: center;
+}
+
+.tasks_list .task .deadline .expired {
+  background-color: lightpink;
+  border-radius: 6px;
+  font-weight: bold;
+  color: darkred;
+}
+
+.tasks_list .task .action {
+  grid-area: action;
+  text-align: right;
+}
+
+.del_btn {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 4px 12px;
+}

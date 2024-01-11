@@ -1,0 +1,17 @@
+<header>
+  <div class="header_container">
+    <h1>Planer z backendem</h1>
+    <a class="tasks" [routerLink]="['/tasks']">Zadania</a>
+    <a class="archive" [routerLink]="['/archive']">Archiwum</a>
+  </div>
+</header>
+
+<body>
+  <div class="router-outlet">
+    <router-outlet></router-outlet>
+  </div>
+</body>
+
+<footer>
+  <p class = "footernote">Angular Lab-d, by Maciej Umiastowski 49878</p>
+</footer>
